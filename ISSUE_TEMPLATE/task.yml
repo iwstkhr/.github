@@ -1,0 +1,31 @@
+name: Task
+description: Track a chore, refactor, docs update, or other work item.
+title: "[Task]: "
+body:
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: What needs to be done, and why?
+    validations:
+      required: true
+
+  - type: textarea
+    id: todo
+    attributes:
+      label: To Do
+      value: |
+        - [ ]
+    validations:
+      required: true
+
+  - type: textarea
+    id: done
+    attributes:
+      label: Definition of Done
+      description: How will we know this is complete?
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Additional Context
