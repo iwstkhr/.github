@@ -20,7 +20,7 @@ Labels are applied only if they exist in the repository. `bug` and `enhancement`
 
 ## Git hooks (lefthook)
 
-[lefthook.yml](lefthook.yml) loads the shared Git hooks from [shared-config](https://github.com/iwstkhr/shared-config). [.editorconfig](.editorconfig), [.yamllint.yml](.yamllint.yml), and [.rumdl.toml](.rumdl.toml) are copied from `shared-config`, and [mise.toml](mise.toml) pins lefthook and the tools its hooks run. With mise installed, set up the tools and Git hooks:
+[lefthook.yml](lefthook.yml) loads the shared Git hooks from [shared-config](https://github.com/iwstkhr/shared-config). [.editorconfig](.editorconfig), [.yamllint.yml](.yamllint.yml), [.rumdl.toml](.rumdl.toml), and [biome.json](biome.json) are copied from `shared-config`, and [mise.toml](mise.toml) pins lefthook and the tools its hooks run. With mise installed, set up the tools and Git hooks:
 
 ```bash
 mise install
@@ -28,3 +28,7 @@ lefthook install
 ```
 
 `pull_request_template.md` starts with a `##` section, so it disables MD041 (first line heading) with an inline comment instead of changing the shared rumdl config.
+
+## Renovate
+
+[renovate.json](renovate.json) extends the shared `renovate-preset` from [shared-config](https://github.com/iwstkhr/shared-config) for dependency updates.
